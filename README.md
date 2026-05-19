@@ -125,6 +125,8 @@ The following cleaning techniques were applied to the raw data before analysis:
 | Standardize Text Case | Inconsistent capitalisation across columns | `PROPER()` function |
 | Date Formatting | Inconsistent or unrecognised date formats | Number Format → Date |
 | Remove Irrelevant Data | Columns/rows not needed for analysis | Manual deletion |
+<img width="1599" height="730" alt="WhatsApp Image 2026-05-19 at 17 50 59" src="https://github.com/user-attachments/assets/e8b37821-9baa-4011-9045-4b71ed810e22" />
+
 
 ---
 
