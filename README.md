@@ -161,3 +161,7 @@ The following cleaning techniques were applied to the raw data before analysis:
 - **Microsoft Excel 2016 or later** (the `.xlsm` format and VBA macros require a desktop version of Excel)
 - Macros must be enabled for the auto-fill functionality to work
 - The workbook is **not compatible** with Google Sheets or LibreOffice Calc due to VBA macro dependencies
+
+## Dashboard
+<img width="853" height="561" alt="Screenshot 2026-05-19 173804" src="https://github.com/user-attachments/assets/23d9045e-e202-4d0b-b346-040c310dfecc" />
+
