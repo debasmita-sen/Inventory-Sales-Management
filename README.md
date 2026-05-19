@@ -103,12 +103,19 @@ The workbook contains **13 sheets**, each serving a distinct purpose:
 
 ### Excel Functions Used
 
-| Function | Purpose |
-|---|---|
-| `IF` | Tests whether live stock is below the reorder level and returns `Yes` or `No` for the Reorder Status column |
-| `SUMIF` | Calculates live stock by summing all incoming deliveries and subtracting all outgoing sales for a specific Product ID |
-| `COUNTIF` | Counts how many unique products belong to each product category in the Summary Analysis |
-| **Macro (VBA)** | Auto-fills Product Name, Supplier, and Warehouse Location as soon as a Product ID is entered in the Stock In or Stock Out sheets |
+| Function | Description | How It Is Used in This Workbook |
+|---|---|---|
+| `IF` | Tests a logical condition and returns one value if the condition is true and another if it is false | Checks whether the Live Stock Quantity is below the Reorder Level and returns `Yes` or `No` in the Reorder Status column; also used to suppress blank rows in the Stock Out and Reorder Alerts sheets |
+| `SUMIF` | Adds all values in a range that match a single criterion | Calculates each product's Live Stock Quantity by summing all incoming deliveries from the Stock In sheet and subtracting all outgoing sales from the Stock Out sheet, matched by Product ID |
+| `COUNTIF` | Counts the number of cells in a range that meet a single condition | Counts how many products belong to each category in the Summary Analysis sheet |
+| `COUNTIFS` | Counts cells that meet multiple conditions simultaneously | Counts how many products within each category have a Reorder Status of `Yes`, giving the "Number of Reorder Products" per category in the Summary Analysis sheet |
+| `SUM` | Adds all values in a specified range | Totals the category-level figures (Total Products, Total Stock, Reorder Products) into overall grand totals in the Summary Analysis sheet |
+| `VLOOKUP` | Searches for a value in the first column of a range and returns a value from a specified column in the same row | Retrieves the Live Stock Quantity for each product flagged in the Reorder Alerts sheet by looking up the Product ID against the Clean_Data sheet |
+| `IFERROR` | Returns a custom value if a formula produces an error, otherwise returns the formula result | Wraps VLOOKUP calls so that if a Product ID is not found, the cell displays a blank or "Not Found" instead of an error code such as `#N/A` |
+| `ABS` | Returns the absolute (non-negative) value of a number | Converts any negative stock quantities in the Raw Data into positive values during the data cleaning step |
+| `PROPER` | Converts a text string so that the first letter of each word is capitalised and the rest are lowercase | Standardises inconsistently cased text across product name and category columns when pulling data from Raw Data into Clean_Data |
+| **XLOOKUP** | Searches a range for a match and returns the corresponding value from another range; a more flexible successor to VLOOKUP | Used in the Content, Stock Out, and Reorder Alerts sheets to auto-populate supplier and product details from Clean_Data based on a Product ID lookup |
+| **Macro (VBA)** | A set of programmed instructions that run automatically in the background to perform repetitive tasks | Instantly auto-fills the Product Name, Supplier, and Warehouse Location columns the moment a Product ID is typed into the Stock In or Stock Out sheets |
 
 ---
 
