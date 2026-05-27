@@ -170,5 +170,6 @@ The following cleaning techniques were applied to the raw data before analysis:
 - The workbook is **not compatible** with Google Sheets or LibreOffice Calc due to VBA macro dependencies
 
 ## Dashboard
-<img width="853" height="561" alt="Screenshot 2026-05-19 173804" src="https://github.com/user-attachments/assets/23d9045e-e202-4d0b-b346-040c310dfecc" />
+<img width="988" height="556" alt="image" src="https://github.com/user-attachments/assets/fefa6860-4690-40ea-b263-2f7ea4ba17a8" />
+
 
